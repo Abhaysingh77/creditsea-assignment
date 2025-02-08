@@ -17,7 +17,7 @@ export default function Report() {
       }
 
       try {
-        const response = await axios.get(`http://localhost:5000/api/files/credit-report/${documentId}`)
+        const response = await axios.get(`https://creditsea-assignment-yljz.onrender.com/api/files/credit-report/${documentId}`)
         setReport(response.data)
       } catch (err) {
         setError("Failed to load report")

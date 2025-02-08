@@ -2,6 +2,7 @@ import { useState } from "react"
 import axios from "axios"
 
 export default function FileUpload() {
+
   const [file, setFile] = useState(null)
   const [message, setMessage] = useState("")
   const [isLoading, setIsLoading] = useState(false)
@@ -19,7 +20,7 @@ export default function FileUpload() {
 
     setIsLoading(true)
     try {
-      const response = await axios.post("http://localhost:5000/api/files/upload", formData)
+      const response = await axios.post("https://creditsea-assignment-yljz.onrender.com/api/files/upload", formData)
       const { documentId } = response.data
 
       // Store the documentId in local storage
